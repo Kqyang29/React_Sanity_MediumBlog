@@ -13,7 +13,7 @@ interface IFormInput {
   comment: string;
 }
 
-function PostPage({ post }) {
+function PostPage({ post }: any) {
   console.log(post);
 
   const [submitted, setSubmitted] = useState(false);
@@ -151,7 +151,7 @@ function PostPage({ post }) {
         <h3 className="text-4xl">Comments</h3>
         <hr className="pb-2" />
 
-        {post.comments.map(comment => (
+        {post.comments.map((comment: any) => (
           <div key={comment._id}>
             <p>
               <span className="text-yellow-500">
@@ -180,7 +180,7 @@ export const getStaticPaths = async () => {
 
   const posts = await sanityClient.fetch(query);
 
-  const paths = posts.map(post => ({
+  const paths = posts.map((post: any) => ({
     params: {
       slug: post.slug.current
     }

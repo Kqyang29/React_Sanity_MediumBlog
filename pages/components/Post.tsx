@@ -7,7 +7,7 @@ function Post({ posts }: any) {
   console.log(posts);
   return (
     <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 lg:p-6" >
-      {posts.map(post => (
+      {posts.map((post: any) => (
         <div className="border rounded-lg group cursor-pointer overflow-hidden">
           <Link
             key={post._id}
