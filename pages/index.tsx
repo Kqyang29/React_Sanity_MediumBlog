@@ -17,7 +17,7 @@ import PostPage from './components/Post'
 
 // you can also just use ({posts}:Props)
 
-const Home: NextPage = ({ posts }) => {
+const Home: NextPage = ({ posts }: any) => {
 
   return (
     <div className="max-w-7xl mx-auto">
