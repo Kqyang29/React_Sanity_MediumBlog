@@ -2,7 +2,7 @@ import Link from "next/link";
 import { sanityClient, urlFor } from "../../sanity";
 
 
-function Post({ posts }) {
+function Post({ posts }: any) {
   // sanity studio
   console.log(posts);
   return (
